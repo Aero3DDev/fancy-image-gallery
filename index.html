@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Image Gallery</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <style>
+
+        header h1::before {
+            content: url('images/photo-gallery-icon.png');
+            position: relative;
+            padding-right: 1rem;
+            vertical-align: middle;
+        }
+
+        div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <header>
+        <h1>Fancy Image Gallery</h1>
+    </header>
+
+    <main>
+        <div class="gallery">
+            <a 
+                data-fancybox="gallery"
+                data-src="images/kodim07.png"
+                data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+            >
+                <img src="images/kodim07.png" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    
+        <div class="gallery">
+            <a 
+                data-fancybox="gallery"
+                data-src="images/kodim21.png"
+                data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+            >
+                <img src="images/kodim21.png" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    
+        <div class="gallery">
+            <a 
+                data-fancybox="gallery"
+                data-src="images/kodim22.png"
+                data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+            >
+                <img src="images/kodim22.png" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    
+        <div class="gallery">
+            <a 
+                data-fancybox="gallery"
+                data-src="images/kodim23.png"
+                data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+            >
+                <img src="images/kodim23.png" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          //
+        });    
+    </script>
+
+</body>
+
+</html>
